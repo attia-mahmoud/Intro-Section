@@ -1,0 +1,17 @@
+@use "../utilities/flow" as *;
+@use "../abstracts/breakpoints" as *;
+
+footer {
+  @include flex(3rem, row, center, center);
+  img {
+    width: 4rem;
+  }
+  margin-top: 2rem;
+  @include mq(large) {
+    padding-inline: 3rem;
+    img {
+      width: 6rem;
+    }
+    width: 100%;
+  }
+}

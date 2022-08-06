@@ -1,0 +1,554 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap"); /* --------------------- */
+/* Root */
+/* --------------------- */
+:root {
+  --clr-neutral-off-white: hsl(0deg, 0%, 98%);
+  --clr-neutral-gray: hsl(0deg, 0%, 41%);
+  --clr-neutral-off-black: hsl(0deg, 0%, 8%);
+  --fs-100: 0.7875rem;
+  --fs-200: 0.9rem;
+  --fs-300: 1.0125rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.265625rem;
+  --fs-600: 1.40625rem;
+  --fs-700: 1.6875rem;
+  --fs-800: 1.96875rem;
+  --fs-900: 2.25rem;
+}
+@media only screen and (min-width: 750px) {
+  :root {
+    --fs-100: 0.7875rem;
+    --fs-200: 0.9rem;
+    --fs-300: 1.2375rem;
+    --fs-400: 1.2375rem;
+    --fs-500: 1.265625rem;
+    --fs-600: 1.40625rem;
+    --fs-700: 1.6875rem;
+    --fs-800: 1.96875rem;
+    --fs-900: 5.625rem;
+  }
+}
+
+/* --------------------- */
+/* Reset */
+/* --------------------- */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body {
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: min-content 1fr;
+  overflow-x: hidden;
+}
+
+/* --------------------- */
+/* Typography */
+/* --------------------- */
+.fs-100 {
+  font-size: var(--fs-100);
+}
+
+.fs-200 {
+  font-size: var(--fs-200);
+}
+
+.fs-300 {
+  font-size: var(--fs-300);
+}
+
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.fs-500 {
+  font-size: var(--fs-500);
+}
+
+.fs-600 {
+  font-size: var(--fs-600);
+}
+
+.fs-700 {
+  font-size: var(--fs-700);
+}
+
+.fs-800 {
+  font-size: var(--fs-800);
+}
+
+.fs-900 {
+  font-size: var(--fs-900);
+}
+
+.letter-spacing-1 {
+  letter-spacing: 3px;
+}
+
+.letter-spacing-2 {
+  letter-spacing: 2.5px;
+}
+
+.letter-spacing-3 {
+  letter-spacing: 2px;
+}
+
+.letter-spacing-4 {
+  letter-spacing: 1.5px;
+}
+
+.letter-spacing-5 {
+  letter-spacing: 1px;
+}
+
+.line-height-1 {
+  line-height: 3;
+}
+
+.line-height-2 {
+  line-height: 2.5;
+}
+
+.line-height-3 {
+  line-height: 2;
+}
+
+.line-height-4 {
+  line-height: 1.5;
+}
+
+.line-height-5 {
+  line-height: 1;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+.fw-900 {
+  font-weight: 900;
+}
+
+.ff-epilogue {
+  font-family: "Epilogue", sans-serif;
+}
+
+.text-neutral-off-white {
+  color: hsl(0deg, 0%, 98%);
+}
+
+.bg-neutral-off-white {
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+.text-neutral-gray {
+  color: hsl(0deg, 0%, 41%);
+}
+
+.bg-neutral-gray {
+  background-color: hsl(0deg, 0%, 41%);
+}
+
+.text-neutral-off-black {
+  color: hsl(0deg, 0%, 8%);
+}
+
+.bg-neutral-off-black {
+  background-color: hsl(0deg, 0%, 8%);
+}
+
+.d-block {
+  display: block;
+}
+
+.container {
+  padding-inline: 2em;
+  margin-inline: auto;
+  max-width: 80rem;
+}
+
+.center_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header {
+  display: flex;
+  gap: 1rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  display: none;
+}
+header img:last-child {
+  cursor: pointer;
+}
+@media only screen and (min-width: 750px) {
+  header .open-icon {
+    display: none;
+  }
+}
+
+main {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  max-height: 70vh;
+}
+@media only screen and (min-width: 750px) {
+  main {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    max-height: 100vh;
+  }
+  main picture {
+    margin: 0 auto;
+    width: min(70%, 35rem);
+  }
+}
+main .content {
+  padding-inline: 1rem;
+  margin-top: 2rem;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main .content p {
+  max-width: 38ch;
+}
+@media only screen and (min-width: 750px) {
+  main .content {
+    margin: 0 auto;
+    padding-inline: 3rem;
+    margin-top: 0rem;
+    display: flex;
+    gap: 2.5rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    order: -1;
+  }
+  main .content p {
+    max-width: 45ch;
+  }
+  main .content h1 > span {
+    width: 100%;
+    margin-top: -2rem;
+    display: block;
+    line-height: 1.3;
+  }
+}
+main button {
+  margin-top: 0.5rem;
+  padding: 0.7rem 1.25rem;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+main button:hover {
+  color: hsl(0deg, 0%, 8%);
+  background-color: hsl(0deg, 0%, 98%);
+  outline: 1px solid hsl(0deg, 0%, 8%);
+}
+@media only screen and (min-width: 750px) {
+  main button {
+    padding: 1rem 1.7rem;
+  }
+}
+
+footer {
+  display: flex;
+  gap: 3rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+footer img {
+  width: 4rem;
+}
+@media only screen and (min-width: 750px) {
+  footer {
+    padding-inline: 3rem;
+    width: 100%;
+  }
+  footer img {
+    width: 6rem;
+  }
+}
+
+.navigation {
+  position: absolute;
+  right: 0;
+  width: 65%;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+}
+.navigation .close-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 1.5rem;
+  top: 1.5rem;
+}
+.navigation .nav-content {
+  width: 100%;
+  position: absolute;
+  top: 4rem;
+}
+.navigation .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.navigation .nav-links li:hover {
+  color: hsl(0deg, 0%, 8%);
+  cursor: pointer;
+}
+.navigation .dropdown-arrow {
+  cursor: pointer;
+  display: inline;
+  margin-left: 1rem;
+}
+.navigation .nav-signin {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navigation .nav-signin p:hover {
+  cursor: pointer;
+  color: hsl(0deg, 0%, 8%);
+}
+.navigation button {
+  padding: 0.5rem 5rem;
+  border-radius: 12px;
+  border: none;
+  border: 2px solid hsl(0deg, 0%, 41%);
+  cursor: pointer;
+}
+.navigation button:hover {
+  border: 2px solid hsl(0deg, 0%, 8%);
+  color: hsl(0deg, 0%, 8%);
+}
+.navigation .nav-sublist {
+  margin-left: -1rem;
+  list-style: none;
+  display: none;
+}
+.navigation .nav-sublist li:not(:last-child) {
+  margin-bottom: 1.2rem;
+}
+.navigation .nav-sublist img {
+  width: 1.1rem;
+  display: inline;
+  margin-right: 1rem;
+  vertical-align: middle;
+}
+@media only screen and (min-width: 750px) {
+  .navigation {
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 5rem;
+    transform: none;
+    transition: none;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .navigation .close-icon {
+    display: none;
+  }
+  .navigation .nav-content {
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    top: 0rem;
+  }
+  .navigation .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .navigation .nav-links li:hover {
+    color: hsl(0deg, 0%, 8%);
+    cursor: pointer;
+  }
+  .navigation .dropdown-arrow {
+    cursor: pointer;
+    display: inline;
+    margin-left: 1rem;
+  }
+  .navigation .nav-signin {
+    display: flex;
+    gap: 4rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .navigation .nav-signin p:hover {
+    cursor: pointer;
+    color: hsl(0deg, 0%, 8%);
+  }
+  .navigation button {
+    padding: 0.6rem 1.5rem;
+    border-radius: 12px;
+    border: none;
+    border: 2px solid hsl(0deg, 0%, 41%);
+    cursor: pointer;
+  }
+  .navigation button:hover {
+    border: 2px solid hsl(0deg, 0%, 8%);
+    color: hsl(0deg, 0%, 8%);
+  }
+  .navigation .nav-sublist {
+    background-color: white;
+    box-shadow: 0px 0px 50px -23px rgba(0, 0, 0, 0.75);
+    padding: 1.5rem 2rem;
+    border-radius: 15px;
+    position: absolute;
+    margin: 0rem;
+    list-style: none;
+    display: none;
+  }
+  .navigation .nav-sublist li:not(:last-child) {
+    margin-bottom: 1.2rem;
+  }
+  .navigation .nav-sublist img {
+    width: 1.1rem;
+    display: inline;
+    margin-right: 1rem;
+    vertical-align: middle;
+  }
+  .navigation .features-sublist {
+    top: 3rem;
+    left: 16rem;
+  }
+  .navigation .company-sublist {
+    top: 3rem;
+    left: 29rem;
+  }
+}
+
+body {
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+/*# sourceMappingURL=/main.77bb5cfd.css.map */

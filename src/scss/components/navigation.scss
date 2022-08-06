@@ -1,0 +1,161 @@
+@use "../utilities/flow" as *;
+@use "../abstracts/breakpoints" as *;
+
+.navigation {
+  position: absolute;
+  right: 0;
+  width: 65%;
+  height: 100vh;
+  transform: translateX(100%);
+  transition: transform 250ms ease-in-out;
+
+  .close-icon {
+    cursor: pointer;
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+  }
+
+  .nav-content {
+    width: 100%;
+    position: absolute;
+    top: 4rem;
+  }
+
+  .nav-links {
+    list-style: none;
+    @include flex(1.5rem, column, center, flex-start);
+    li:hover {
+      color: hsl(0, 0%, 8%);
+      cursor: pointer;
+    }
+  }
+
+  .dropdown-arrow {
+    cursor: pointer;
+    display: inline;
+    margin-left: 1rem;
+  }
+
+  .nav-signin {
+    @include flex(1rem, column, center, center);
+    p:hover {
+      cursor: pointer;
+      color: hsl(0, 0%, 8%);
+    }
+  }
+
+  button {
+    padding: 0.5rem 5rem;
+    border-radius: 12px;
+    border: none;
+    border: 2px solid hsl(0, 0%, 41%);
+    cursor: pointer;
+    &:hover {
+      border: 2px solid hsl(0, 0%, 8%);
+      color: hsl(0, 0%, 8%);
+    }
+  }
+
+  .nav-sublist {
+    margin-left: -1rem;
+    list-style: none;
+    li:not(:last-child) {
+      margin-bottom: 1.2rem;
+    }
+
+    img {
+      width: 1.1rem;
+      display: inline;
+      margin-right: 1rem;
+      vertical-align: middle;
+    }
+    display: none;
+  }
+
+  @include mq(large) {
+    position: relative;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 5rem;
+    transform: none;
+    transition: none;
+    @include flex(1rem, row, space-around, center);
+    .close-icon {
+      display: none;
+    }
+
+    .nav-content {
+      @include flex(1rem, row, space-around, center);
+      width: 100%;
+      position: relative;
+      top: 0rem;
+    }
+
+    .nav-links {
+      list-style: none;
+      @include flex(4rem, row, center, flex-start);
+      li:hover {
+        color: hsl(0, 0%, 8%);
+        cursor: pointer;
+      }
+    }
+
+    .dropdown-arrow {
+      cursor: pointer;
+      display: inline;
+      margin-left: 1rem;
+    }
+
+    .nav-signin {
+      @include flex(4rem, row, center, center);
+      p:hover {
+        cursor: pointer;
+        color: hsl(0, 0%, 8%);
+      }
+    }
+
+    button {
+      padding: 0.6rem 1.5rem;
+      border-radius: 12px;
+      border: none;
+      border: 2px solid hsl(0, 0%, 41%);
+      cursor: pointer;
+      &:hover {
+        border: 2px solid hsl(0, 0%, 8%);
+        color: hsl(0, 0%, 8%);
+      }
+    }
+
+    .nav-sublist {
+      background-color: white;
+      box-shadow: 0px 0px 50px -23px rgba(0, 0, 0, 0.75);
+      padding: 1.5rem 2rem;
+      border-radius: 15px;
+      position: absolute;
+
+      margin: 0rem;
+      list-style: none;
+      li:not(:last-child) {
+        margin-bottom: 1.2rem;
+      }
+
+      img {
+        width: 1.1rem;
+        display: inline;
+        margin-right: 1rem;
+        vertical-align: middle;
+      }
+      display: none;
+    }
+    .features-sublist {
+      top: 3rem;
+      left: 16rem;
+    }
+    .company-sublist {
+      top: 3rem;
+      left: 29rem;
+    }
+  }
+}

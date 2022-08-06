@@ -1,0 +1,18 @@
+@use "../utilities/flow" as *;
+@use "../abstracts/breakpoints" as *;
+
+header {
+  @include flex(1rem, row, space-between, center);
+  padding: 1.5rem 1rem;
+
+  img:last-child {
+    cursor: pointer;
+  }
+
+  @include mq(large) {
+    .open-icon {
+      display: none;
+    }
+  }
+  display: none;
+}
