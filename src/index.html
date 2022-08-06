@@ -31,57 +31,60 @@
         alt="close menu"
       />
       <div class="nav-content">
-        <ul class="nav-links">
-          <li>
-            Features
-            <img
-              class="dropdown-arrow"
-              id="features-arrow"
-              src="./assets/images/icon-arrow-down.svg"
-              alt="arrow-down"
-            />
-          </li>
-          <ul class="nav-sublist features-sublist">
+        <div class="nav-content-links">
+          <img src="./assets/images/logo.svg" alt="logo" id="nav-logo" />
+          <ul class="nav-links">
             <li>
-              <img src="./assets/images/icon-todo.svg" alt="todo icon" /> Todo
-              List
-            </li>
-            <li>
+              Features
               <img
-                src="./assets/images/icon-calendar.svg"
-                alt="todo icon"
-              />Calendar
+                class="dropdown-arrow"
+                id="features-arrow"
+                src="./assets/images/icon-arrow-down.svg"
+                alt="arrow-down"
+              />
             </li>
+            <ul class="nav-sublist features-sublist">
+              <li>
+                <img src="./assets/images/icon-todo.svg" alt="todo icon" /> Todo
+                List
+              </li>
+              <li>
+                <img
+                  src="./assets/images/icon-calendar.svg"
+                  alt="todo icon"
+                />Calendar
+              </li>
+              <li>
+                <img
+                  src="./assets/images/icon-reminders.svg"
+                  alt="todo icon"
+                />Reminders
+              </li>
+              <li>
+                <img
+                  src="./assets/images/icon-planning.svg"
+                  alt="todo icon"
+                />Planning
+              </li>
+            </ul>
             <li>
+              Company
               <img
-                src="./assets/images/icon-reminders.svg"
-                alt="todo icon"
-              />Reminders
+                class="dropdown-arrow"
+                id="company-arrow"
+                src="./assets/images/icon-arrow-down.svg"
+                alt="arrow-down"
+              />
             </li>
-            <li>
-              <img
-                src="./assets/images/icon-planning.svg"
-                alt="todo icon"
-              />Planning
-            </li>
+            <ul class="nav-sublist company-sublist">
+              <li>History</li>
+              <li>Our Team</li>
+              <li>Blog</li>
+            </ul>
+            <li>Careers</li>
+            <li>About</li>
           </ul>
-          <li>
-            Company
-            <img
-              class="dropdown-arrow"
-              id="company-arrow"
-              src="./assets/images/icon-arrow-down.svg"
-              alt="arrow-down"
-            />
-          </li>
-          <ul class="nav-sublist company-sublist">
-            <li>History</li>
-            <li>Our Team</li>
-            <li>Blog</li>
-          </ul>
-          <li>Careers</li>
-          <li>About</li>
-        </ul>
+        </div>
         <div class="nav-signin fs-200">
           <p class="">Login</p>
           <button class="bg-neutral-off-white text-neutral-gray">
@@ -96,7 +99,7 @@
           <source
             srcset="./assets/images/image-hero-desktop.png"
             alt="hero"
-            media="(min-width: 750px)"
+            media="(min-width: 1440px)"
           />
           <img src="./assets/images/image-hero-mobile.png" alt="hero" />
         </picture>
